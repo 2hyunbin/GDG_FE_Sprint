@@ -1,10 +1,5 @@
-import { Metadata } from "next";
-import React from "react";
 import { TabNavItem } from "@/ui/tab-nav-item";
-
-export const metadata: Metadata = {
-  title: "레벨업 Next js: 라우팅",
-};
+import React from "react";
 
 export default async function Layout({
   children,

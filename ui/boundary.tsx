@@ -44,12 +44,39 @@ export const Boundary = ({
     <div
       className={clsx("relative rounded-lg border border-dashed", {
         "p-3 lg:p-5": size === "small",
-        "p-3 lg:p-5": size === "small",
-        "p-3 lg:p-5": size === "small",
-        "p-3 lg:p-5": size === "small",
-        "p-3 lg:p-5": size === "small",
-        "p-3 lg:p-5": size === "small",
+        "p-4 lg:p-9": size === "default",
+        "border-gray-300": color === "default",
+        "border-vercel-pink": color === "pink",
+        "border-vercel-blue": color === "blue",
+        "border-vercel-cyan": color === "cyan",
+        "border-vercel-violet": color === "violet",
+        "border-vercel-orange": color === "orange",
+        "text-vercel-pink animate-[rerender_1s_ease-in-out_1]":
+          animateRendering,
       })}
-    ></div>
+    >
+      <div
+        className={clsx(
+          "absolute -top-2.5 flex gap-x-1 text-[9px] uppercase leading-4 tracking-widest",
+          {
+            "left-3 lg:left-5": size === "small",
+            "left-4 lg:left-9": size === "default",
+          },
+        )}
+      >
+        {labels.map((label) => {
+          return (
+            <Label
+              key={label}
+              color={color}
+              animateRendering={animateRendering}
+            >
+              바운더리: {label}
+            </Label>
+          );
+        })}
+      </div>
+      {children}
+    </div>
   );
 };

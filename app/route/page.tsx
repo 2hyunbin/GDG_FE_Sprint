@@ -1,6 +1,8 @@
+import { ExternalLink } from "@/ui/external-link";
+
 export default function Page() {
   return (
-    <div className="prose-sm prose max-w-none">
+    <div className="prose-sm prose max-w-none space-y-9">
       <h1 className="text-xl font-bold">
         라우팅 기본: 파일 시스템 기반 폴더를 사용
       </h1>
@@ -14,6 +16,10 @@ export default function Page() {
           템플릿(Templates): 특정한 레이아웃이나 구조를 재사용하는 공통 UI
         </li>
       </ul>
+
+      <div className="flex gap-2">
+        <ExternalLink href="https://nextjs.org">문서</ExternalLink>
+      </div>
     </div>
   );
 }
