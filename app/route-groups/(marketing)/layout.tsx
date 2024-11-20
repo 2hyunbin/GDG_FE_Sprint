@@ -26,6 +26,8 @@ export default async function Layout({
             ]}
           />
         </div>
+
+        <div>{children}</div>
       </div>
     </Boundary>
   );
